@@ -1,0 +1,33 @@
+链表 一定先装在 arraylist中 
+
+https://blog.csdn.net/SoulOH/article/details/81062223
+
+LeetCode141---判断是否是环形链表
+问：给定一个链表，判断链表中是否有环。
+进阶：
+你能否不使用额外空间解决此题？
+这道题的思路有两种，一种是以前在找链表中点时用过的快慢指针，如果有环的话，快指针总会和慢指针相遇，一种是用递归，里面很巧妙的让每个节点的next指向自己，当一遍遍历结束之后，我们会遇到自己指向自己的节点，那说明有环。
+快慢指针的代码：
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        if(head==null||head.next==null)return false;
+        ListNode fast=head,slow=head;
+        while(fast.next!=null&&fast.next.next!=null){            
+            fast=fast.next.next;
+            slow=slow.next;
+            if(fast==slow)return true;
+        }
+        return false;
+    }
+}
+递归的代码：
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        if(head==null||head.next==null)return false;
+        if(head.next==head)return true;
+        ListNode l=head.next;
+        head.next=head;
+        boolean isCycle=hasCycle(l);
+        return isCycle;
+    }
+}

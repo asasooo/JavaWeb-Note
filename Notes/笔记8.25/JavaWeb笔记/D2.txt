@@ -1,0 +1,63 @@
+
+
+css与js js是重点
+	css 层叠样式表 层叠：强调优先级  样式表：有很多属性值 
+	是页面的显示效果很好 分离属性 使代码很好维护‘
+ css 和 html 的结合方式 有4种：
+	1，每个html上都有style属性 把css与html结合在一起
+	  <div style="background-color:red;color:字体颜色   之间用,隔开">帅帅啊啊</div>
+	2,使用 <style>标签 写在<head>里
+		<head>  <style type="text/css'>
+			div{  background-color:red;} 要用大括号 指明对象
+			</style></head>
+		<body><div>asdhAHD</div> </body>
+	3,在style标签里 使用语句   这样可以直接修改css 实现分离  可以直接改css文件 实现大面积更改
+		@import url(css文件路径） 后缀名就是 .css 在css文件里直接写 代码 div{background-color:red;}
+	  在html中进行引用 ：写在head里面
+		<style type="text/css">
+			@import ur(XXX.css);
+		</style>
+	4,*** 使用头标签link 来进行实现  也要写在head里面
+		<link rel="stylesheet(样式表)" type="text/css" href="css文件路径"/>
+
+    第3中结合方式 在一些浏览器下不兼容 很少用 一般用地4种结合方式
+
+  css的优先级 ：
+	单独在标签内定义的 优先级最高
+	由上到下 后加载的优先级最高
+      css的选择器 ：
+	基本选择器： 
+		标签选择器：使用标签名作为选择器的名称
+		 
+ 		class选择器：每个html标签都有一个属性
+			<head><style type="text/css'>
+				div.haha{  指定元素进行更改}
+				.haha {只要class为haha的 都更改样式 }
+			</style></head>
+			<div class="haha">asd</div>
+		id选择器 ：
+			每个html都有id属性
+			<head><style type="text/css">
+				div#haha{ 这样设置 }
+				#haha { 只要id为haha的 都更改样式 }
+			</style></head>
+			<div id="haha">asda</div>
+
+	     基本选择器优先级 ：  后加载的优先级高
+			style选择区 》id选择器 》 class选择器 》标签选择器
+
+	css扩展选择器 ：
+		关联选择器：<div><p>asdasd</p></div>  <p>dasd</p>  有两个p标签 指定divp 变化
+			<style type="text/css">  div p { 之间用空格隔开 &nbsp; }
+		组合选择器 ： <div>213a</div>  <p>SDaa</p> 把div和p设置成同一种样式
+				<style type="text/css" > div,p{用逗号，隔开}
+		伪元素选择器 ： css提供了定义好的样式 可以直接使用
+			  比如使用超链接{ ：link 未访问前的样式原始状态 ：hover 鼠标放上去的状态 ：active点击　：ｖｉｓｉｔｅ鼠标之后的状态 }
+		　　　<style type="text/css"> a:link{ 更改未访问前的样式原始状态 的样式}
+		  记忆的方法： lv ha 
+			
+   css 盒子模型 ： 有三个重要概念  { 边框 内边距 外边距 }
+	边框 border 统一设置 { 上 border-top 下 bprder-bottom 左右同理}
+		内边距（文字到边界的距离） padding:统一设置 四面的距离  padding-left:设置左边的页边距
+		外边距 margin 可以同意设置 -left 等等。。。
+   css的布局的漂浮

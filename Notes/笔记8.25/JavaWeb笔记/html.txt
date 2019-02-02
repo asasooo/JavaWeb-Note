@@ -1,0 +1,196 @@
+html
+简介：
+ 超文本标记语言
+ Hyper Text Markup Language 
+ 网页语言
+ 超文本：超出文本的范畴，使用html可以轻松实现
+ 标记：html所有操作都通过标记实现 <标签>
+     html直接通过浏览器 直接运行
+htmml的规范 
+	一个开始和结束的标签
+	html包含两部分内容
+		<head>显示信息</head>
+		<body>显示页面上的内容</body>
+	不区分大小写
+	有的标签 没有结束标签
+		<br/>换行
+		<hr/>一条线
+
+  html操作思想 
+	网页中有许多不同的数据 需要不同的显示效果
+使用
+
+html常用标签 
+	<font></font>
+	属性 size：文字的大小1—7
+	     color:文字颜色 两种方式
+		1，英文单词
+		2，试用rgb表示 #加16进制
+	注释标签
+	     <!--   --!>
+	标题 标签<h1></h1> 里面的数字是变的 数字越大标题越小 标题标签会自动换行
+	水平线标签 <hr/> size粗细 color颜色
+	特殊符号转译  &lt;  --- <
+		      &gt; ---- >
+		  空格也需要转译  &nbsp;  ----" " 一个空格
+
+  列表标签 
+	<dl></dl> 无序列表范围
+		在dl里面 <dt></dt>上层内容
+			 <dd></dd>下层内容
+	<ol></ol> 有序列表范围
+		ol属性 type:设置排序方式 1，数字  a,英文 i，罗马字
+		在ol里面 <li></li>
+	
+	想要加特殊符号 使用<ul></ul>标签 默认为原点·
+		更改 type 改变默认的 特殊符号
+		在ul里面 <li></li>
+
+图像标签 重点
+	<img src="地址"></img>
+	属性： width height 宽高属性  alt="鼠标停留在图片上 会显示文字 用的少 兼容性差“
+ 
+路径的介绍 
+	分类：两类1，绝对路径   C：\Use\io\lxa.jpg  http://www.baidu.com
+	     	   2，相对路径  一个文件相对于另一个文件的位置 img\iii.jpg
+				../  表示html的上层路径
+
+ 超链接 <href></href> target="_blank" 跳转到空白的页面 “_self”在现在的页面打开
+			target = “#” 什么也不打开
+  定位资源   
+	如果想要定位资源 ： 定义一个位置 
+		<a name="top">顶部</a> 
+		回到顶部 <a href="#top">回到顶部</a>
+
+  <pre></pre> 可以进行换行的 pre 按照里面的内容进行换行
+
+  表格标签 
+	<table  border="设置线 1 大小" bordercolor="线的颜色" cellspacing="线之间的空隙大小  设置为0 没有空隙" width="" height="">
+	
+		<tr可以设置显示方式 align="center"字体居中 >  <td></td>  <td></td>  </tr>
+		<tr></tr>
+	</table>
+	tr表示一行  td 表示单元格 
+	  th也可以表示单元格 th可以实现 居中 加粗
+	  表格的标题<caption></caption> 设置标题
+	 合并单元格 
+		rowspan ="3" 跨行合并3个单元格
+		colspan 
+	
+  表单标签****
+	可以提交数据到服务器 这个过程可以使用表单标签
+	**<form  action="提交到哪里 写出路径 01-hello.html 提交到这个页面里"  method="get或 post”/form> ： 定义一个表单的范围
+		输入项：可以输入内容
+			大部分输入项 使用<input type="输入项的类型"/>
+			** 普通输入项：<input type="text"/>
+				eg：
+					<form>
+						手机号码:<input type="text"/>
+					</form>
+			** 密码输入项：<input type="password"/>
+			** 单选输入项 必须要有value  <input type="radio" name="sex" cheaked="checked 这个属性可以默认选中 多选也是一样"/>女 <input type="radio" name="sex"/>男   需要属性 name  name属性必须一样才能单选
+			** 复选输入项 必须要有value  <input type="checkbox" name="love"/>羽毛球 <input type="checkbox" name="love"/> 网球
+			** 文件输入项 <input type="file"/>  可以插入本地文件
+			** 下拉输入项(不在input标签里） <select name="birth">
+								<option value="1998" selected="selected 实现默认选中'>1998<option/>
+								<option value="1997">1997<option/>
+								<option value="1996">1996<option/>
+							</select>
+			** 文本域 <textarea cols="有机行" rows="有几列"></textarea>
+			** 隐藏项 <input type="hidden"/> 具体用途之后讲
+			** 重置按钮 <input type="reset" value="重置按钮" 回到初始 />
+			** 普通按钮 <input type="button" value="普通按钮"  
+			通过图片进行上传 **
+				<input type="image" src="图片路径"/>
+			** 提交按钮 <input type="submit"/> 注册 提交之后网页 出现？后的值被提交到服务器上 
+		***** 每个标签里都要有 name 属性 ****
+		  ** get 和 post 的区别： get请求地址栏会携带提交数据 post不会携带提交数据 
+					  get 请求的安全级别低 get 请求数据有大小的限制 post没有带下的限制
+					  还有一个 e
+	使用表单写注册界面：
+		创建一个html页面 ：
+	<h2>注册</h2>
+	<form action="要提交的页面">
+		<table width="100%" border="1" >
+			<TR>
+			<td>注册邮箱</td>
+			<td><input type="text" name="mail"/></td>
+			</TR>
+			<tr>你可以使用<a href="#">手机号注册</a></tr>
+			<tr><input type="password" name="pw"/></tr>
+			<tr>姓名：<input type="text" name="name"/></tr>
+			<tr><input type="radio' value="sex" checked="e\cheaked" /></tr>	
+			<tr><select>
+				<option value="1998">1998</option>
+				<option value="2000' selected="selected" ></option>
+			    </select>
+			</tr>
+				<td><img src="验证码 "/><td><input type="text"/></td>
+			<tr>
+			<tr><td>&nbsp;</td><td><input type="image" src="地址"/></tr>
+		</table>
+	</form>
+
+	html中其他常用标签的使用
+		<b>留心昂</b> 加粗
+		<u>尤文图斯</u> 下划线
+		<s>yiyiyi</s> 删除线
+		<i></i> 斜体
+	<pre>原样输出 文本里面有换行 也会还行
+
+	<sub> 下标
+	<sup> 上标
+	************
+	<div> 可以自动换行
+	<span> 都会在一行显示 
+	<p> 段落标签 
+
+  html 头标签的使用 ：
+	在head里的标签 叫头标签
+	  title: 表示在标签显示的
+	  meta： 可以设置页面的相关的内容 
+		<meta name="keywords" contenet="liuxinang,asasooo 在早期的搜索引擎会找keyword关键字搜索内容 现在不用了" >
+
+  框架标签 ： 用的时候要 删除 <body> 直接写在head外面
+	<frameset> rows 按照行进行划分  <frameset rows="80,*"> *表示剩下的部分都是
+		eg:	<frameset rows="100,*">
+				<frame name="" src="a.html"/>
+				<frame name="" sec="b.html"/>
+			</frameset>
+	有点类似j2se的frame插入panel label 等等。。。
+
+  html中的中文乱码问题：utf-8 和 GB2312 的区别  系统默认一定不会有中文乱码
+
+	DAY1总结 ：
+		html操作思想 使用标签把遥操作的数据 修改标签的属性值 进行修改
+		常用标签 font属性 size 1—7 color 英文 或 16进制
+			 标题标签 h1....h6 越来越小 会自动换行
+ 			 注释 <!--  -->
+			 列表标签 <dl><dt上层 ></dt><dd下层></dd></dl>
+				有序<ol type="1,a,i"><li></li><ol>
+			 	无序<ul><li></li></ul>
+			 图像标签 <img src="" width height alt="鼠标放上去显示的文字"/> alt兼容差
+			 路径 相对路径  在同一目录直接写   下一集目录 ？？？\。。。  上一层目录 ../
+			 超链接标签 <a href="路径" target="_self现在页面打开 _blank新窗口打开 默认_self"/>
+			 表格标签 *****
+				<table> <tr><td></td>或<th></th>加粗居中单元格 </tr> </table>
+			 表单标签 最重要*** 注册登录可以使用表单标签
+				<from></from>属性: 表示表单范围
+					action : 提交到的地址
+					method : 提交方式 post get.
+					enctype:上传时用到
+				输入项 :
+					普通输入项 <input type="text"/.
+					密码 type="password"
+					单选 ;radio  name值要相同 要有value
+					复选 ： checkbox  name值要相同 要有value
+					下拉框 <select name=""><option value=""></opton></select>
+					文本域 :<ttxtarea cols="用行和列定义大小" rows="" name=""></textarea>
+					文件 file 
+					提交按钮 ; submit 
+					重置 : reset
+					使用图片提交 ： <input type="image" src=""/>
+					普通按钮 button
+					隐藏项 : hidden
+  	div自动换行  span  在同一行显示
+	框架标签 不是重点

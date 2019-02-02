@@ -1,0 +1,63 @@
+JavaScript基础 & DOM
+	js的String对象 
+		创建String对象 var str = "abc";
+	方法和属性
+	<script type="text/javascript">
+
+	方法：
+	  与html相关的方法
+	  与java相似的方法
+	
+	与html相关的方法
+		bold() 加粗  str.bold();
+		fontcolor() 字体颜色 str.fontcolor();
+		fontsize(1-7) 设置字体大小
+		
+		link(url) 将字符串显示为超链接{ str.link("hellp.htm");
+
+		sup sub 上下标
+		document.write(s1.sub());
+	与java相似的方法
+		concat 方法： var str1 = "ac"; var str2 = "dd";
+				document.write(str1.concat(str2));  
+		charAt 返回制定位置的字符串 ：
+			var str = "acbf";
+			document.write(str.charAt(0)); 输出a  若字符的位置不存在 则返回空字符
+		indexOf 返回指定字符所在的位置 若没有则返回-1
+		split 切分字符 根据制定字符切分成数组  { var str = "a-f-g"; var arr = str.split("-"); document.write(arr.length);
+		replace 替换字符串 （ 要传递第个参数 第一个替换第二个　） { var str = "acb"; str2.replace("a","g"); //输出 gcb
+		substr() 和 substring() 区别 ：
+			var str = "abcdefghuiop";
+			document.write(str.substr(5,3));    输出 fgh
+			document.write(str.substring(5,3));    输出de
+		   substr 从第几位开始向后截取几位
+		   substring  从第几位开始截取到第几位 不包含第二位上的字符
+
+  js的数组 Array对象
+	创建数组 3种
+		var arr = [1,2,3];
+  		var arr = new Array(3);
+		var arr = new Array(1,"a",2);
+		——————
+		var arr = [];   创建一个空的数组
+		var arr = new Array(); 创建一个空的数组
+
+		concat方法  连接数组 arr1.concat(arr2);
+		join() 根据指定字符分割数组 可以将默认的 , 分割符替换{
+			var arr = new Array(3);
+			arr[0] = "a";arr[1] = "b";arr[2] = "c";
+			document.write(arr.join("-"));
+		push（） 向数组末尾添加元素 **返回数组新的长度  
+			 如果传入数组的话 先将要传入的数组转化为字符串 在将字符串传入
+			var arr = ["a"，"b","c","tom"];
+			document.write(arr.push("lxa"));
+			//输出  a,b,c,tom,lxa
+		pop()  会返回数组最后的元素 并将数组最后的元素删除
+			var arr = ['b','tom',"ann"];
+			document.write(arr.pop());  输出：ann
+			document.write(arr);  输出：b,tom
+		reverse() 元素倒叙排列
+			var arr = ["lxa","zjy","hhh"];
+			document.write(arr.reverse()); 输出： hhh,zjy,lxa
+		
+	

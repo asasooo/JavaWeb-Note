@@ -1,0 +1,4 @@
+PrintWriter PrintStream 输出流 不会抛异常
+	有自动的flush功能
+
+

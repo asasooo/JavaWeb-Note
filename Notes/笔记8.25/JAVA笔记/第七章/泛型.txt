@@ -1,0 +1,16 @@
+ 更加方便
+  可以避免强制转换可能出现的错误
+
+List<String> c= new ArrayList<String> 取出时不用转化
+
+Iterator<String> i = i.iterator();
+
+尖括号 之中可以有 两个 类型 （多用在Map之中）。
+
+什么样的类 可以加尖括号：
+	ArrayList等等。。。
+
+
+用到 集合 是 尽量使用泛型（Generic)
+	在定义集合时 同时定义对象的类型
+	在 collection iterator 时 都要定义

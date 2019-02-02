@@ -1,0 +1,12 @@
+Buffer 缓冲区。
+
+StringBuffer 可变
+String 不可变
+
+
+String s = "abc"
+StringBuffer a = new StringBuffer(s)
+s.append('/')在最后加/
+s.delete(8,s.length())从第8个删除到最后
+s.insert(0,a)在第0个位置插入a
+s.reverse()逆序print

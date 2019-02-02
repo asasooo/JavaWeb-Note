@@ -1,0 +1,78 @@
+
+  Schema的介绍
+	xml的schema约束
+	xml有 dtd schema 两种约束 ： 一个xml中只能有一个dtd 有多个schema
+	dtd语法：<!ELEMENT 元素名称 约束 >
+	schema语法 ：符合xml的语法规范
+		xml的语句
+	一个xml可以有多个schema 用名称空间来进行区分 （ 类似于包名称
+	dtd里面有PCDATA 但是在xml里面可以有更多的数据类型
+		在schema里面可以直接定义一个整数类型
+	schema语法更加复杂 目前不能替代dtd
+
+	schema的快速入门：
+		创建schema文件 —— 写入语句
+		看xml中里面有多少元素
+		也要遵循xml规范 <?version=1.0 encoding="utf-8"?>
+		schema文件是一个约束文件 —— xml是被约束文件（schema本生就是xml文件’
+		** 在schema文件里面使用提供属性的标签
+			既然xml schema 都是xml文件 那如何得知谁是约束文档？
+
+			<schema xmlns="" targetNamespace="" elementFormDefault="">
+		xmlns在一个schema文件里面 叫做xmlns属性 表示这是一个约束文件
+		targetNamespace:直接通过这个地址引入约束文件
+		
+		首先看xml中有多少元素：
+		  <element name="">
+		看简单元素和复杂元素：
+		  如果是复杂元素：<complexType>  <sequence> 子元素 </sequence(排列顺序的意思）>  </complexType>
+		  简单元素 写复杂元素
+
+		  在被约束的文件里面 引入被约束文件
+			<person（标签名） xmlns:xsi="http://www.3c.org/2001/XMLSchema-instance"
+			xmlns="http://http://www.itcast.cn/12333 (这里是 schema文件的路径"
+			xsi:schemaLoction="约束文档的地址路径
+	** schema文件：
+		xmlns="http://www.w3.org/2001/XMLSchema" 表示是约束文件
+		targetNameSpace ： 引入约束文件 使用  地址：url地址
+		elementFormDefault="qualified"
+		
+	**  在xml里面导入schema文件：
+		在根节点里面 xmls:xsi="http://www.w3.org/2001/XMLSchema-instance" 这些在被约束的根节点里
+				xmlns=""
+				schemaLoction=""  这里写的是schema的路径地址
+	
+	schema 规范：
+		<?xml version="1.0" encoding="utf-8"?>
+		   <schema>  .... </schema>
+		判断是简单元素还是复杂元素
+			简单元素：
+			<element name="xml里的标签名" type="数据类型">
+			复杂元素：
+			<all> 表示只能出现一次
+			<choice> 表示只能 出现其中的任意一个 不能全都出现
+			<maxOccurs="unbounded（表示出现次数"  这个属性要写在element中 表示这个元素标签可以多次出险
+			<any></any> : 表示可以出现任意元素  
+			<attribute name="id1" type="int" use="required"></attribute> 这表示在 约束文件的声明标签里 强制要求一个属性值 id1 类型int
+				要卸载复杂元素里面  卸载</complexType> 之前
+			    		
+					required——必须的 
+			Schema的名称空间 （ ：xsi  用于区分 schema文件 
+			  
+		若想要引入多个schema文件 需要给每个起一个别名
+
+  sax的解析原理：    parser——剖析器
+	解析xml 有两种技术 dom  sax 
+	 dom:根据xml的层级结构 分配一个属性结构 吧xml中的标签属性 文本都封装成对象
+	 sax：是事件驱动的 边读边解析
+		在java.xml.parsers 包中
+		SAXParsers 由于是抽象类  所以从 Document
+			
+				
+				
+
+		
+		
+
+
+		

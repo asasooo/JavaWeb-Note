@@ -1,0 +1,3 @@
+Array读取速快 改变慢
+Linked改变快 读取慢  LIst的内存空间不连续
+Hash 在两者之间

@@ -1,0 +1,31 @@
+实现map接口的泪用来 储存 一对 值
+
+Map 中必须是 对象 因为要建立在堆上面（即使 是int类 也要转换为Integer传入）
+	好消息是 现在java会自动打包 不用以上繁琐的操作
+
+	
+
+	
+	Auto-boxing/unboxing 自动打包解包 支持java1.5之后的版本
+
+
+	
+
+ 	map  __> HashMap TreeMap
+	map类之中储存的键值通过 建 来标识 所以键值不能重复（equals不能重复 即hashcode不能重复）
+
+TreeMap 二叉树 一个元素下面有两个元素
+	适合用作索引
+
+HashCode是int类型
+
+map方法：	
+	Object put(Object key,Object value)返回值的Object类型
+	   value 替换掉 key值上的原value 返回回来
+ 	Object get(key) 找到key所对应的值 并返回 object （多数时间用到转换）
+
+
+containsKey（？？）  意思是 是否包含 ？？  这个值  返回boolean 类型
+
+	
+

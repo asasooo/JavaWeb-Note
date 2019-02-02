@@ -1,0 +1,87 @@
+ js的Date对象 时间对象
+	java里：Date date = new Date();  //格式化 转化成习惯的时间 —— toLocaleString()
+	
+ js里获取当前的时间
+	var date = new Date();  document.write(date); 得出的格式不习惯
+	转化为习惯的格式：
+		toLocaleString() : document.write(date.toLocaleString()); // 输出 ：2018年2月13日 13：13：22
+	得到具体时间的方法
+		获取年的方法 ： getFullYear（）; 返回四位数字的年份
+		获取月的方法 :  getMonth() : **只能的到0-11 所以要＋1
+		获取星期的方法 ：getDay() : 星期，返回的是 0-6  **星期日返回的是-0  星期一到星期六返回1-6
+		获取当前的日 ： getDate() : 得到天 1-31 
+		获取当前的小时 ： getHours（） ： 
+		获取当前的分钟 ： getMinutes()
+		获取当前秒：	  getSeconds() 
+		获取毫秒 ：       getTime()  --- 返回1970。1.1 至今的毫秒数
+			应用场景 ： 可以用于来处理缓存的效果 不让有缓存 { http://www.baidu.com?毫秒数  用毫秒数作为参数
+		
+  Math对象 （进行数学的运算
+	这个对象都是静态方法 直接使用Math.方法();
+	abs()绝对值 
+	ceil()进行向上舍入 
+	floor() 向下舍入
+	round() 四舍五入
+	random（）随机数 （ 伪随机数 返回0-1之间的随机数
+	max（a,b） 返回大的 min 返回小的
+	pow （a,b) a的b次幂
+
+   js的全局函数  不属于任何一个对象
+	直接写名称就可以使用
+	eval() 直接写就行 ： 执行js代码 （可以使用这个方法直接来执行）： eval("laert("111")"); 直接弹出111
+	encodeURI()decodeURI()  对字符进行编码 解码 中文乱码需要解码
+		var ste = "中文";
+		var encode = encodeURI(str) 变成乱码;  var decode = decodeURI(encode) 解码乱码 ;
+	isNaN()  判断当前的字符是不是数字  
+		var str = "aaa" isNaN(str) 返回true 
+		*** 是数字返回false 不是数字返回true
+	parseInt() 类型转换 字符转化为number JS没有int
+	parseFloat() 意思差不多
+
+ js函数的重载 ： *** 不存在重载  但是可以通过其他方式 模拟重载 在每个函数里都有数组arguments
+	面试题目 ： 不存在重载 但可以通过 数组arguments模拟重载
+	eg :   function add () {  if(arguments.length == 2) { return .... }
+
+  js的bom对象 ： 浏览器对象模型
+		对象 ：
+			navigator  ：
+				navigator.appName  显示浏览器名称 （ 没有加“（）”）
+			screen  ：屏幕的信息  screen.width  screen.height  像素高 宽
+			location  ： 请求的url地址  
+				href属性 ： 获取到请求的url地址
+					    设置url地址 ：页面上安置一个按钮 按钮可以打开新网页
+						需要一个鼠标点击时间 onclick="js方法（）";
+						<input type="button" value="tiaozhuan"  onclick="href1();"/>
+						<script type="javascript/css" >
+						function href1 (){location.href = "hello.html";} 
+						</script>
+			history  ： 历史对象 请求的url的历史记录
+				eg: 创建a.html 超链接到 b.html 
+				    创建 b.html 超链接到 c.html 
+					创建<input type="button" value="next" onclick="back();">
+						<script type="javascript/css" > function back(){historyback(); //回到上一个页面}
+						function next(){ history.forward(); //到下一个页面
+				    创建 c.html
+					
+			window  ***  窗口对象  顶层对象（所有bom都是在window里进行操作
+			  方法 ：
+				alert() 全程是 window.alert() 弹出一个框 显示内容 可以简写为alert
+				confirm()  确认框 ： <script type="javascript/css" >var flag =  window.confirm("这是确认框"); </script>
+					会返回 确定 和 取消 两个值
+				prompt() 输入对话框 ： 很少用 有两个参数 在框里面显示的内容 和 输入框的默认值
+				open()  打开一个新的窗口 ：
+					open("打开新窗口的url地址"，"","窗口特征 高 宽  width=100，height = 200") 
+				close()  关闭窗口
+			做定时器：
+				setInterval("js代码"，"毫秒数")  在制定周期 调用js代码
+					window.setInterval("alert("111")","3000") 每3秒 alert一次111
+				setTimeout("js代码"，"毫秒数")  在指定的毫秒数 后执行 一会执行一次
+					window.setTimeout("alert("111")","3000") 3秒后 alert 111
+				clearInterval(setInterval 的 id) ：清楚 setInterval
+				clearTimeout(setTimeout 的 id) ： 清除 setTimeout
+				
+	
+	
+ 
+
+		

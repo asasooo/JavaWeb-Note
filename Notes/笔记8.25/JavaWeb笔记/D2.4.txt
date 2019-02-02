@@ -1,0 +1,87 @@
+ js 和 html的结合方式 （有两种
+	1 使用一个标签 <script typr="text/javascript">
+	alert("alert可以弹出一个框");
+	</script>
+	2 使用script标签 引入一个外部的js文件
+	***创建一个js文件 写js代码
+		<script type="text/javascript" src=" 引入js文件路径"> 若在此处写入js代码 不会执行 </script>
+				
+  原始类型和声明变量
+	Java的基本数据类型 byte short int boolean long double float
+
+	定义变量 都是用关键字 var
+	Js 的原始类型 5个——string number boolean null undifined
+		string：字符串 eg{var str = "abc";
+		number：数字类型 var m = 123;
+		boolean：true false  var flag=false;
+		null： var date = new Date();  表示获取对象的引用 null表示对象引用为空 所有对象的应用也是object
+		undifined: 定义了一个变量 没有赋值
+	typeof（）; 可以查看当前变量的类型 
+  js里面的语句 ：
+	if(a==5){ alert("5");}
+	
+	switch(a){
+		case 5 : break;
+		case 6: break;
+		default:....} 跟java一样、
+
+	循环语句 while do while for 都有
+	
+  js的运算符 
+	js里没有小数 123/100 = 1.23
+	
+	var str ="1233" 
+	alert(str+1); ----"12331"  跟java相同
+	alert(str-1); ----"1232"   直接进行减法 若str不是数字进行相减会提示NaN 报错
+
+	boolean 
+		var flag = true：等于1
+		如果设置成true值为1 如果设置false值为0
+
+ 	 	var a = "5";
+		if(a==5){alert("5")}else{alert("other")} 输出5
+		if(a=5=5){alert("5")}else{alert("other")} 输出other
+		*** 两个等号比较值 三个等号比较值和类型
+	引入知识： 直接向页面输出语句（直接显示在页面上 
+			document.write("直接输出在页面上");
+			document.write("<br/>");
+			document.write("<hr/>"); 输出变量固定值和html代码
+
+  js的数组 ( 可以存放不同的数据类型
+	定义方式 3种	
+		第一种 ： var arr  = [1,2,3,4，“as”，true];
+		第二种 ： 使用内置对象Array对象
+			var arr1 = new Array(5); 有5个元素
+			arr1[0] = "1";
+		第三种 ： 使用内置对象 Array
+			var arr2 = new Array(3,4,"d"); 传入多个表示直接定义
+			有length属性
+
+  js里的定义函数 有三种方式
+	1， 使用到一个关键字 function
+		function 方法名 （参数列表）{
+			方法体；
+			返回值 可有可无（跟Java不同）
+			}
+	2.匿名函数 
+		function （参数列表 ）{
+			方法体；返回值；}
+		var add3 = function(){}
+			可以这样调用匿名函数
+	3.使用js里面内置的对象 function （用的少)
+		new function("参数列表","方法体返回值”)；
+
+  JS的全局变量和局部变量
+	全局变量 ： 在scropt标签里的定义一个变量 这个变量在页面js部分可以使用
+	局部变量 ： 只能在一部分使用 在方法内部使用
+
+  script标签位置  （可以放在任何的位置)
+	一般放在</body>的后面 一定会执行
+	
+  js没有重载***
+	
+
+
+	
+
+ 

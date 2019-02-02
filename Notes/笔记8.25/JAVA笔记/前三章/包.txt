@@ -1,0 +1,15 @@
+除了 lang 包类 其他都需要引用
+继承：
+ 	子类对象 被引用时 父级对象包含在子集对象的内存之中。
+
+父类 private 限制的在继承中 虽然继承了 但是不能访问。
+
+修饰符  ：
+private 可在 class内部
+default 可在 class内部 和 同一个包之中
+protected 可在 class内部  同一个包之中 子class
+public 可在 class内部 同一个包 子class 任何地方
+
+extends 包含的父类中的private类 也可以用在子类之中。
+
+未进行定义的 默认为 default

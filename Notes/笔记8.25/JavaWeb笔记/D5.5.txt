@@ -1,0 +1,56 @@
+   使用jaxp实现查询的操作
+	创建一个xml文件
+		<person>
+			<p1>
+				<name>lxa</name>
+			</p1>
+			<p1>
+				<name>lll</name>
+			</p1>
+		</person>
+	sax : 
+		SAXPerser
+	这时候可以创建一个java的class 
+		public class jaxpTest{
+			public static void main(String arg[]){
+			1创建解析器工厂
+			2根据解析器工厂创建解析器
+			3解析xml 返回document
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			DocumentBuilder builder = dbf.newDocumentBuilder();
+			Document（需要导入w3c document类） doc = builder.parse("src/person.xml");  (返回一个document
+			//随后需要得到所以的name元素
+			NodeList list = doc.getElementsByTagName();
+			for(int i = 0 ;i<list.getLenegth();i++	{
+				Node name1 = list.item(i); item返回节点
+				//得到name元素里的值 
+				String s = name1.getTextContent(); 得到标签里的内容
+				System.out.print(s);
+			}
+   使用jaxp查询某一个节点
+	查询xml中的第一个name元素的值
+		
+   使用jaxp添加节点
+	想在第一个p1的下面 添加一个sex标签
+	4,得到p1
+	5，创建sex标签
+	6，创建文本createTextNode
+	7，把文本创建到sec appendChild
+	8，放入sex
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builder = dbf.newDocumentBuilder();
+		Document doc = builder.parse(地址);
+		得到所有的p1
+		NodeList nl = document.getElementsByTagName("p1");
+		Node p1 = list.item(0)  表示第一个p1
+		Element sex = document.createElement("sex");
+		Text t = document.createTextNode("man")
+		sex.appendChild(t);
+		p1.appendChild(sex);
+	*** 最后一定要有 回写 操作
+	***     Transformer 抽象类 
+		TransformerFactory tf = TransformerFactory.newInstance();
+		Transformer t = tf.newTransformer();
+		t.transform(new DOMSource(document),new StreamResult(xml地址))
+		 完成添加
+			 

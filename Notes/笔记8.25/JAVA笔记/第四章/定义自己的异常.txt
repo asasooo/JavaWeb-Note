@@ -1,0 +1,7 @@
+定义自己的异常：
+	通过extends进行定义class类。
+	通常继承 java.lang.Exception 类
+	
+	
+示例代码：
+	class MyException extends Exception {

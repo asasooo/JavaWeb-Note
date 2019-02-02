@@ -1,0 +1,18 @@
+Collection 集合 包含 Set List
+	Set ---> HashSet TreeSet 没有顺序 不能重复
+	List -->ArrayList LinkedList 有顺序 可以重复
+	Map --->HashMap 一一对应关系 一个键值对应一个Object
+
+Set 重复的东西 不能覆盖
+List 常用方法：	
+	sort 对容器内的元素进行排序
+	shuffle 对容器里的对象进行随机排序
+	reverse 对容器里的对象进行逆向排序
+	fill（list ，object）用特定的对象重写整个List容器
+	copy（list dest,list src)将src容器的内容拷贝到dest里去
+	binarySearch(LIst,Object) 在顺序的list容器 才用二分法查找内容
+
+Map 常用方法 ：	
+	put（key , value) 用Value 替换掉原先的旧Value 并返回Value
+	get（key) 返回key所对应的 Value 
+	containsKey（ ？） 检查是否包含？ 这个值  返回Boolean 类型

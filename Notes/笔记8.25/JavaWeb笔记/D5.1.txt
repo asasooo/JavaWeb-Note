@@ -1,0 +1,59 @@
+  XML
+	表单的提交方式
+	1.使用submit提交
+	<from >
+		<input type="submit"/>
+	</from>
+	2.buttom进行提交
+	<from默认提交到当前页面>
+		<input type="buttom" onclick="tijiao();"/>
+	</from>
+	function tijiao(){
+		//获取form
+		document.getElementById();
+		//提交form,设置action
+		form.action="页面地址" 提交到的页面，不写就是自己的页面
+		form.submit();
+	}
+	3.超链接进行提交
+	<a href="hello.html(提交到的页面)/usename=123(要提交的值)">点我提交</a>
+	4.onclick 鼠标点击事件 
+	  onchange改变内容（一般和select使用）
+	  onfocus 得到焦点 
+	  onblur 失去焦点
+
+	<input type="text" name="text1" value="填写" onfocus="focus1()" onblur="onblur1()";
+	function focus1(){
+		var input1 = document.getElementById();
+		//效果类似于搜索框 一点之前里面的内容就没了
+	}
+	function onblur1(){
+	}
+
+  XML的简介：
+	什么是XML ——可扩展标记语言，使用标签进行操作
+	html里的标签都是固定的 都有特定的含义
+	xml里的标签可以自己定义 可以写中文
+	xml的主要功能是 存储数据 
+	xml是w3c组织发布的技术
+	
+  XML的应用： 3个地方
+	不同的系统之间进行传输数据
+		qq之间数据的传输——发送的内容发送到 服务器 之间的传输格式：xml 有利于程序的维护
+	用来表示生活中有关系的数据
+	经常用在配置文件
+  XML的语法：
+	xml的文档声明 ***
+		创建一个后缀.xml的文件 
+		如果写xml 一定要有文档声明
+		文档声明必须写在第一行
+		属性 version 版本用1.0 
+			encoding：编码类型 gbk utf-8
+		*** 文档声明：<?xml version="1.0"encoding="gbk"?>
+	定义元素（标签 ***
+	定义属性 ***
+	特殊字符 ***
+	注释 ***
+	CDATA区
+	PI指令
+	

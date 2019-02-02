@@ -1,0 +1,2 @@
+缓冲流  套写在别的留上
+	BufferedReader 缓冲区

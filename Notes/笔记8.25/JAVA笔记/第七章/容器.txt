@@ -1,0 +1,20 @@
+灵活看
+
+可以代替数组的 容器 更加灵活。
+	
+	
+	位于java.util 包中 util提供工具类。
+
+Collection----->set 中的数据对象没有顺序且不可以重复。
+		list 中的数据对象有顺序且可以重复
+
+Map------------>接口定义了储存  键（Key)---值（value)映射对  的方法。
+Collection 方便之处在于 可以改变	Collection a = new ArrayList()
+						其中 ArrayList可以改变。
+
+
+在调用remove contains 方法 需要重写 equals方法。
+	相等的对象需要有相同的 hashcode。
+		可以通过hashcode找到内存的地址 不是物理地址。
+··		hASHCODE适合做索引。
+			重写equals必须重写hashcode方法。

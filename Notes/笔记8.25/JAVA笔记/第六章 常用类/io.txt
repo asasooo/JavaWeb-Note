@@ -1,0 +1,26 @@
+File类
+	public File(String pathname）
+
+exists 检查是否存在 返回boolean.
+
+mkdirs创建路径 只能创建 文件夹.
+
+File类中的list()和listFiles()方法
+ 
+list()方法是返回某个目录下的所有文件和目录的文件名，返回的是String数组
+
+listFiles()方法是返回某个目录下所有文件和目录的绝对路径，返回的是File数组
+
+
+以下实例演示了使用 File 类的 file.getParent() 方法来获取文件的上级目录：
+Main.java 文件
+import java.io.File;
+ 
+public class Main {
+    public static void main(String[] args) {
+        File file = new File("C:/File/demo.txt");
+        String strParentDirectory = file.getParent();
+        System.out.println("文件的上级目录为 : " + strParentDirectory);
+    }
+}
+

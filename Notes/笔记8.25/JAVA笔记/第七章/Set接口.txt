@@ -1,0 +1,20 @@
+Set接口是collection的子接口 set接口没有提供额外的方法。
+set接口的容器类中的元素是没有顺序的 而且不可以重复
+
+Set可以 与 数学之中的 集合 的概念相对应
+
+Set  包涵   HashSet TreeSet
+
+
+示例代码：
+	public static void main(String arg[]){
+		Set s = new HashSet();
+		s.add("Hello");
+		s.add("Hello");
+		System.out.print(s)  //此时已经重写了 tostring（）
+
+	输出结果 ： [ Hello ]
+
+	 因为不能重复
+
+retain 保留

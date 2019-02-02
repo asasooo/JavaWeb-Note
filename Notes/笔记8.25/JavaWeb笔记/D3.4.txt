@@ -1,0 +1,38 @@
+  document对象 整个文档
+	每个载入浏览器的html文件 都将成为一个document文件
+
+	write方法：
+		想页面输出变量值
+		向页面输出html代码
+		
+	***** 返回的是数组类型 需要遍历  就算只有一个元素依然返回数组Object
+	getElementById() 方法： 不返回数组 直接返回标签 准确！***
+		通过id得到元素（标签
+		使用getElementById得到input标签
+		  var input1 = document.getElementById("nameid");
+		  //得到input里面的value值
+		  alert(input1.name);
+		  input1.value = "cccc";
+		  //向input里设置一个值value
+		  
+	getElementsByName() 方法 一般会返回一个数组Object
+		<input type="text" name="n1" value="aaa"/>
+		<input type="text" name="n1" value="bbb"/>
+		<input type="text" name="n1" value="ccc"/>
+		<script type="text/javascript">
+			var inputs = document.getElenemtsByName("n1"); // 返回一个数组
+		</script type="text/javascript">
+
+	getElementsByTagName() 方法  ： 通过标签名称类型 返回数组object
+		var input1 = document.getElementsByTagName("inpiut");
+	        input1 是一个object数组
+	
+	*** 只有一个标签 这个标签只能使用name获取 使用getElementsByName返回的是一个数组 但是只有一个元素 这时不需要遍历 可以直接通过数组获取内容
+
+
+  案例 ： window弹窗案例 ( 会有一个问题： 这个过程访问了本地文件 chrome不能用... 实际开发中不会反问本地文件 不会出现这个问题）
+	实现过程 ：
+		创建一个页面 有输入项和按钮 按钮上事件：弹出一个新窗口（表格 每一个有一个编号和姓名，按下按钮后再上一个页面输入内容）
+	   	需要夸页面操作 需要方法opener
+		opener（）方法 ： 表示可以得到创建这个窗口的上一个窗口
+			var pwin = windpw.opener;  //返回上一个页面 ***

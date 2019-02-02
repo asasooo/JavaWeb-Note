@@ -1,0 +1,9 @@
+Object流
+	直接将Object写入 独处
+	TestObjectIO.java
+	transient 关键字 （透明的 修饰的成员变量 不予考虑 返回默认的值）
+	Serializable接口 （可以被序列化 为一个字节流 并且不用重写方法 叫做标记接口）
+	Externalizable接口 （控制 相当于实现 Serializable   可以自己控制 序列化 过程  用的机会极少）
+   
+序列化 一般先写入 文件 再用Output调出文件里的 内容进行调用
+  output input 文件路径应当相同 

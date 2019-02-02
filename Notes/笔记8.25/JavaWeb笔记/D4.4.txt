@@ -1,0 +1,87 @@
+  
+  全选练习： 使用复选框上的checked属性
+	创建一个页面
+	复选框和按钮（按钮上有事件
+		四个复选框表示爱好
+		还有 全选 反选 撤销 按钮
+	<body>
+		<input type="checkbox" id="boxid"/>全选/全不选
+		<input type="checkbox" name="love"/>篮球
+		<input type="checkbox" name="love"/>足球
+		<input type="checkbox" name="love"/>羽毛球
+		<input type="checkbox" name="love"/>乒乓球
+		<input type="buttom" value="全选" onclick="all();"/>
+		<input type="buttom" value="全不选" onclick="no();"/>
+		<input type="buttom" value="反选" onclick=:other();:/>
+	</
+	<script type="text/javascript">
+	function all(){
+	var arr = document.getElementsByName("love");  返回的是数组 Elements 有s!!
+	遍历数组
+	for(var i=0 ; i<arr.length;i++){
+		var arrNumber = arr[a];
+		arrNumber.checked=true ; 
+	}
+	function on(){
+	var love = document.getElementsByName("love"):
+	for(var i =0;i<love.length;i++){
+		var love = love[i];
+		love.checked = false ;
+	}
+	}
+	function other(){
+		var love = document.getElementsByName("love"):
+	for(var i =0;i<love.length;i++){
+		var love = love[i];
+		if(love.checked==true){love.checked=false}一个等号赋值 两个等号判断
+		相反。。。
+	}	
+
+  案例：下拉列表左右选择（添加到。。
+	<body>
+	<div>
+	<select id="select1" multiple="multiple"(** 可以把内容都显示出来）style="width:100px;height:100px;">
+		<option>aaaa</option>
+		<option>abbba</option>
+		<option>accca</option>
+	</select>
+	<input type="buttom" value="添加到右边" onclick="add();"/>
+	<input type="buttom" vale= "全部添加到左边" onclick="alladd();"/>
+	</div>
+	<div style="float:left;">
+	<select id="select2" multiple="multiple"(** 可以把内容都显示出来）style="width:100px;height:100px;">
+		<option>dddda</option>
+	</select>
+	</div>
+	</body>
+	<script type="text/javascript">		
+	function add(){
+		var select1 = document.getElementById("select1");
+		var select1 = document.getElementById("select2");
+		var arr = select1 .getElementsByTagName("option"); 返回数组
+	for(var i=0;i<arr.length;i++	){
+		var option1=arr[i];
+		if(option1.selected ==true){select2.appendChild(option1); *** i-- ; 这样能一直使用！！！}
+	}
+	function addall(){
+		var s2 = document.getElementById();
+		var s = document.getElementById();
+		var ops=s.getElementByTagName();
+		for(var h==0;h<ops.length;h++){var op1=ops[h];s2,appendChild(op1);h--;此处同理};
+	}
+
+  案例： 省市联动 （选北京 有 海淀昌平。。 选上海有静安宝山。。
+	<body>
+	<select id="country">
+		<option>中国</option>
+		<option>美国</option>
+		<option>意大利</option>
+	</select>
+	<select id="city">
+		<option></option>
+		<option></option>
+		<option></option>
+	</select>
+	
+	
+		

@@ -1,0 +1,43 @@
+声明方式：
+	type var[]；
+数组分配在堆中。
+在Java中,数组和String字符串都不是基本数据类型,它们被当作类来处理,是引用数据类型。 
+
+
+数组的容量确定之后想要改变长度 不行。
+
+
+数组也可以：
+Public class Test {
+	public static void main(String arg[]){
+		Date[] days;
+		days = new Date[3];
+		for(int i =0;i<3;i++){
+			days[i] = new Data(2004,4,i+1);
+			}
+		}
+	}
+class Data {
+	int year ; int month ; int day;
+	Data(int y;int m ;int d){
+		year = y;
+		month =m;
+		day = d;
+		}
+	}
+
+定义为 类型class 数组。
+
+二维数组可以看作 以数组为元素的 数组：
+	int a[][] = {{1,2},{2,3,4},{1,2,3,4}};
+二维数组 ：
+	length表示的长度：
+	int[3][5] a ;
+	a.length = 3;
+	a.[a.length].length = ??
+
+
+数组拷贝方法：
+	高效率方法：	
+		拷贝内存。arraycopy
+		System.arraycopy(传入数组，从第几个下标开始传，被传数组，从第几个下表开始传，传几个）

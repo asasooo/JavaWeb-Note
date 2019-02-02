@@ -1,0 +1,6 @@
+1父类可以转化为子类；
+Fu i = new Fu();
+Zi f = new Zi();
+f = (Zi)i;
+
+instanceof 可以返回true false 反应是否为 class
