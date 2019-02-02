@@ -1,8 +1,0 @@
-若在类中的异常不想try catch 可以进行throws 让调用此异常方法的类进行 try catch 或继续throw。
-
-在main 方法中不要throws 要在main方法中尽量进行try catch。
-
-抛出 有两种方法： 
-	在方法名 抛出 throws
-	
-	自己手动抛出。

@@ -1,2 +1,0 @@
-repaint 重画 很重要
-	先 调用 update 再 调用 paint
